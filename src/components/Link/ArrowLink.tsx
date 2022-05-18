@@ -1,5 +1,5 @@
-import IconArrow from "../../../assets/images/icon-arrow.svg";
-import Flex from "../Flex/Flex";
+import IconArrow from "../../assets/images/icon-arrow.svg";
+import Flex from "../layout/Flex/Flex";
 import {MouseEvent} from "react";
 import clsx from "clsx";
 

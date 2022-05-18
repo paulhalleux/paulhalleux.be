@@ -1,24 +1,34 @@
-import HeaderLogo from "../assets/images/header-logo.svg";
-import IconGithub from "../assets/images/icon-github.svg";
-import IconLinkedin from "../assets/images/icon-linkedin.svg";
+import HeaderLogo from "../../assets/images/header-logo.svg";
+import IconGithub from "../../assets/images/icon-github.svg";
+import IconLinkedin from "../../assets/images/icon-linkedin.svg";
 import clsx from "clsx";
-import Flex from "../components/layout/Flex/Flex";
-import Grid from "../components/layout/Grid/Grid";
-import {useState} from "react";
+import Grid from "../../components/layout/Grid/Grid";
+import NavigationLink from "./NavigationLink";
+import {useNavigation} from "./NavigationContext";
+import {useEventListener} from "../../hooks/use-event-listener";
+
+const menuItems = [
+    {href: "#home", label: "Home"},
+    {href: "#about", label: "About me"},
+    {href: "#skills", label: "My skills"},
+    {href: "#work", label: "My work"},
+    {href: "#contact", label: "Contact me"},
+];
 
 export default function Navigation() {
-    const [active, setActive] = useState("home");
+    const setActive = useNavigation()[1];
+
+    useEventListener("hashchange", () => {
+        setActive(window.location.hash.toLowerCase())
+    });
 
     return <Grid className={clsx("navigation")} cols="25% 50% 25%">
         <img className={clsx("navigation__brand")} src={HeaderLogo} alt="Logo"/>
-        <nav className={clsx("navigation__menu")}>
-            <NavigationLink current={active} href={"home"} label={"Home"} />
-            <NavigationLink current={active} href={"about"} label={"About me"} />
-            <NavigationLink current={active} href={"skills"} label={"My skills"} />
-            <NavigationLink current={active} href={"work"} label={"My work"} />
-            <NavigationLink current={active} href={"contact"} label={"Contact me"} />
+        <nav role="navigation" className={clsx("navigation__menu")}>
+            {menuItems.map(({href, label}, index) =>
+                <NavigationLink order={index} href={href} label={label} key={href} />)}
         </nav>
-        <nav className={clsx("navigation__socials")}>
+        <nav role="navigation" className={clsx("navigation__socials")}>
             <a href="https://www.linkedin.com/in/paulhalleux/" target="_blank" rel="noreferrer">
                 <img src={IconLinkedin} alt="Github Link Icon"/>
             </a>
@@ -27,14 +37,4 @@ export default function Navigation() {
             </a>
         </nav>
     </Grid>
-}
-
-type NavigationLinkProps = {
-    current: string;
-    href: string;
-    label: string;
-}
-
-export function NavigationLink({current, href, label}: NavigationLinkProps) {
-    return <a data-active={current === href} href={`#${href}`} className={clsx("navigation__menu-item")}>{label}</a>
 }
