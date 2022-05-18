@@ -1,0 +1,13 @@
+.button {
+    img {
+        transition: transform .1s;
+    }
+    &:hover img {
+        transform: rotate(45deg);
+    }
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--c-text);
+    font-size: 1.2rem;
+}
