@@ -17,8 +17,22 @@
             max-width: 400px;
         }
 
-        .download-button {
+        .download-button span {
             max-width: 120px;
         }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .header {
+        grid-template-columns: 1fr!important;
+    }
+    .header__about {
+        border-right: none!important;
+        border-bottom: 1px solid var(--c-border);
+        padding: var(--padding) 0!important;
+    }
+    .header__quote {
+        padding: var(--padding) 0!important;
     }
 }

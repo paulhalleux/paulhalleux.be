@@ -1,5 +1,9 @@
 .navigation {
-    margin: 2rem 0;
+    position: sticky;
+    top: 0;
+    padding: 2rem 0;
+    background: rgba(var(--c-background-rgb), 0.9);
+    z-index: 1;
 
     .navigation__brand {
         height: 2.5rem;

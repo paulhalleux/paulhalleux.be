@@ -8,10 +8,13 @@
 }
 
 :root {
-    --c-background: #F7F5F4;
-    --c-background-contrast: #F3EBE7;
+    --c-background: #f6f0ed;
+    --c-background-rgb: 246, 240, 237;
+    --c-background-contrast: rgb(236, 224, 217);
+    --c-background-contrast-rgb: 236, 224, 217;
     --c-border: #000000;
     --c-text: #000000;
+    --c-text-secondary: #7E7E7E;
 }
 
 body {

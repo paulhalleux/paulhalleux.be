@@ -1,6 +1,6 @@
 import HeaderLogo from "../assets/images/header-logo.svg"
 import clsx from "clsx";
-import Flex from "../components/layout/Flex/Flex";
+import Flex from "../components/_layout/Flex/Flex";
 
 export default function Footer() {
     return <footer className={clsx("footer")}>
