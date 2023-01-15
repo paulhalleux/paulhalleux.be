@@ -1,0 +1,26 @@
+.snake-fruit {
+  --color: 255, 255, 255;
+
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgba(var(--color), .35);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 4px rgba(var(--color), .1);
+
+  opacity: .5;
+
+  &.active {
+    --color: 67, 217, 173;
+    opacity: 1;
+  }
+
+  span {
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: rgb(var(--color));
+  }
+}

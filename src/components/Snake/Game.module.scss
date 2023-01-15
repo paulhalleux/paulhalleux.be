@@ -1,0 +1,119 @@
+.game {
+  position: relative;
+  width: 510px;
+  height: 475px;
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: linear-gradient(150.26deg, rgba(23, 85, 83, .7) 1.7%, rgba(67, 217, 173, 0.1) 81.82%);
+  border: 1px solid #0C1616;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(32px);
+  border-radius: 8px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: url("../../assets/blur.png");
+    height: 200%;
+    width: 200%;
+    background-size: 100%;
+    z-index: -1;
+
+    opacity: .7;
+
+    top: -50%;
+    left: -50%;
+  }
+}
+
+.rules {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.snake {
+  position: relative;
+  background: rgba(1, 22, 39, 0.84);
+  box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+  border-radius: 8px;
+  width: 15px * 15;
+  height: 15px * 27;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.game-info {
+  flex-grow: 1;
+  color: white;
+  font-size: 14px;
+  height: 15px * 27;
+  display: flex;
+  flex-direction: column;
+}
+
+.food {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .fruits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(100% / 6));
+    grid-template-rows: repeat(2, 30px);
+  }
+}
+
+.keys {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+  gap: 5px;
+  margin-top: 15px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    i {
+      width: 40px;
+      height: 25px;
+      vertical-align: middle;
+      padding-top: 6px;
+      text-align: center;
+      background: linear-gradient(150.26deg, rgba(23, 85, 83, .7) 1.7%, rgba(67, 217, 173, 0.1) 81.82%);
+      border: 1px solid #0C1616;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+
+      &.active {
+        background: var(--c-teal);
+      }
+    }
+  }
+}
+
+.button {
+  padding: 7px 14px;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--c-teal);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: rgb(78, 180, 170);
+  }
+}

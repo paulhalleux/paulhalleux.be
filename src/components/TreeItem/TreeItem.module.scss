@@ -1,0 +1,35 @@
+.tree-item {
+  width: 100%;
+  user-select: none;
+  font-size: 13px;
+
+  header {
+    padding: 6px 14px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--c-gray);
+
+    &.file {
+      padding-left: 35px;
+    }
+
+    &.selected {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &.opened .name {
+      color: white;
+    }
+
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+}

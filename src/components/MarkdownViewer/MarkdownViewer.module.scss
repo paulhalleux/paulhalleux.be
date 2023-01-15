@@ -1,0 +1,36 @@
+.markdown-viewer {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+}
+
+.viewer__code {
+  border-right: 1px solid var(--c-border);
+  width: 100%;
+  height: 100%;
+  color: var(--c-gray);
+  padding: 15px;
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+
+    tr {
+
+      td:first-child {
+        width: 20px;
+        color: white;
+        user-select: none;
+      }
+
+    }
+  }
+}
+
+.viewer__result {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: var(--c-gray);
+}

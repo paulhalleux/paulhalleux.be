@@ -1,0 +1,28 @@
+.navigation-link {
+  display: flex;
+  align-items: center;
+
+  padding: 0 27px 0 25px;
+  height: 100%;
+
+  transition: color 200ms;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    color: white;
+  }
+
+  &.active {
+    color: white;
+    border-bottom: 3px solid var(--c-orange);
+  }
+
+  &.external {
+    border-bottom: none;
+  }
+
+  &.icon {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+}

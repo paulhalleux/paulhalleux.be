@@ -1,0 +1,21 @@
+.code {
+  font-size: 14px;
+  display: flex;
+  gap: 7px;
+
+  &-keyword {
+    color: var(--c-blue);
+  }
+
+  &-variable {
+    color: var(--c-green);
+  }
+
+  &-string {
+    color: var(--c-orange);
+  }
+
+  &-text {
+    color: white;
+  }
+}

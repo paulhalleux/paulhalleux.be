@@ -1,0 +1,42 @@
+.opened-files {
+  height: 40px;
+  border-bottom: 1px solid var(--c-border);
+  width: 100%;
+  display: flex;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+  gap: 20px;
+  color: var(--c-gray);
+  font-size: 13px;
+  border-right: 1px solid var(--c-border);
+  width: max-content;
+  cursor: pointer;
+  user-select: none;
+
+  &--selected {
+    color: white;
+  }
+
+  &:hover, &--selected {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  button {
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+}

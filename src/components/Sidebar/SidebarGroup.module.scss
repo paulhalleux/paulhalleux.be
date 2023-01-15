@@ -1,0 +1,39 @@
+.sidebar-group {
+  user-select: none;
+
+  &:not(:first-child) .group__title {
+    border-top: 1px solid var(--c-border);
+  }
+
+  &:last-child .group__title:not(.opened) {
+    border-bottom: 1px solid var(--c-border);
+  }
+}
+
+.group__title {
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  height: 40px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &.opened {
+    border-bottom: 1px solid var(--c-border);
+
+    i {
+      transform: rotate(0deg);
+    }
+  }
+
+  i {
+    margin-top: 1px;
+    font-size: 24px;
+    transform: rotate(-90deg);
+  }
+}

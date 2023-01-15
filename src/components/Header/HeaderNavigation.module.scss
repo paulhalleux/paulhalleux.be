@@ -1,0 +1,27 @@
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  height: 100%;
+
+  ul {
+    height: 100%;
+    display: flex;
+    border: solid var(--c-border);
+    border-width: 0 1px;
+
+    li:not(:last-child) {
+      border-right: 1px solid var(--c-border);
+    }
+  }
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  border-left: 1px solid var(--c-border);
+}
